@@ -84,6 +84,9 @@ ifeq ($(OS),linux)
 
     DEPENDS += libva
     LIBVA = libva
+  else ifeq ($(TARGET_PLATFORM),aml)
+    DEPENDS += libxkbcommon libinput libudev libevdev mtdev
+    DEPENDS += libamcodec
   endif
 endif
 
